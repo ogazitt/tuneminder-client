@@ -7,6 +7,7 @@ target 'TuneMinder' do
 
   # Pods for TuneMinder
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
 
   target 'TuneMinderTests' do
     inherit! :search_paths
