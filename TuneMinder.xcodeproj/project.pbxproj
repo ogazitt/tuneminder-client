@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D4CFF83089228A3DE627EB /* Pods_TuneMinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5A6EE888F0468C7B2CF587 /* Pods_TuneMinderTests.framework */; };
+		BD539CF760A804EDF3DEBE5E /* Pods_TuneMinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */; };
+		C2BA37AA693625C236FD2652 /* Pods_TuneMinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */; };
 		DC9844181EDEAA8200065B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844171EDEAA8200065B8C /* AppDelegate.swift */; };
 		DC98441A1EDEAA8200065B8C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844191EDEAA8200065B8C /* FirstViewController.swift */; };
 		DC98441C1EDEAA8200065B8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98441B1EDEAA8200065B8C /* SecondViewController.swift */; };
@@ -15,6 +18,7 @@
 		DC9844241EDEAA8200065B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9844221EDEAA8200065B8C /* LaunchScreen.storyboard */; };
 		DC98442F1EDEAA8200065B8C /* TuneMinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98442E1EDEAA8200065B8C /* TuneMinderTests.swift */; };
 		DC98443A1EDEAA8200065B8C /* TuneMinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844391EDEAA8200065B8C /* TuneMinderUITests.swift */; };
+		DC9844481EDFE97E00065B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5A6EE888F0468C7B2CF587 /* Pods_TuneMinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26601CE0C425254F16898A4C /* Pods-TuneMinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderTests/Pods-TuneMinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67DE2C25F9B8F43EB2CE2B82 /* Pods-TuneMinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinder/Pods-TuneMinder.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA0D5D5D94B4C82C97D41DF /* Pods-TuneMinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinder/Pods-TuneMinder.release.xcconfig"; sourceTree = "<group>"; };
+		A7A9F5B1316F701F213BCAD1 /* Pods-TuneMinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderTests/Pods-TuneMinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		CAA85466EAE44C88836BC832 /* Pods-TuneMinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC9844141EDEAA8200065B8C /* TuneMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuneMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9844171EDEAA8200065B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9844191EDEAA8200065B8C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		DC9844351EDEAA8200065B8C /* TuneMinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuneMinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9844391EDEAA8200065B8C /* TuneMinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneMinderUITests.swift; sourceTree = "<group>"; };
 		DC98443B1EDEAA8200065B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F065218C6A13CDF2134CE852 /* Pods-TuneMinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD539CF760A804EDF3DEBE5E /* Pods_TuneMinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D4CFF83089228A3DE627EB /* Pods_TuneMinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BA37AA693625C236FD2652 /* Pods_TuneMinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0532005CFCFD9ABE4B5BB212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67DE2C25F9B8F43EB2CE2B82 /* Pods-TuneMinder.debug.xcconfig */,
+				8BA0D5D5D94B4C82C97D41DF /* Pods-TuneMinder.release.xcconfig */,
+				26601CE0C425254F16898A4C /* Pods-TuneMinderTests.debug.xcconfig */,
+				A7A9F5B1316F701F213BCAD1 /* Pods-TuneMinderTests.release.xcconfig */,
+				CAA85466EAE44C88836BC832 /* Pods-TuneMinderUITests.debug.xcconfig */,
+				F065218C6A13CDF2134CE852 /* Pods-TuneMinderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E5E1994EB0DE641B426E412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */,
+				0D5A6EE888F0468C7B2CF587 /* Pods_TuneMinderTests.framework */,
+				F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC98440B1EDEAA8200065B8C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				DC98442D1EDEAA8200065B8C /* TuneMinderTests */,
 				DC9844381EDEAA8200065B8C /* TuneMinderUITests */,
 				DC9844151EDEAA8200065B8C /* Products */,
+				0532005CFCFD9ABE4B5BB212 /* Pods */,
+				5E5E1994EB0DE641B426E412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +148,7 @@
 				DC9844201EDEAA8200065B8C /* Assets.xcassets */,
 				DC9844221EDEAA8200065B8C /* LaunchScreen.storyboard */,
 				DC9844251EDEAA8200065B8C /* Info.plist */,
+				DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */,
 			);
 			path = TuneMinder;
 			sourceTree = "<group>";
@@ -135,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC98443E1EDEAA8200065B8C /* Build configuration list for PBXNativeTarget "TuneMinder" */;
 			buildPhases = (
+				97289332842DEB24151233BE /* [CP] Check Pods Manifest.lock */,
 				DC9844101EDEAA8200065B8C /* Sources */,
 				DC9844111EDEAA8200065B8C /* Frameworks */,
 				DC9844121EDEAA8200065B8C /* Resources */,
+				098095BA1375AEADA71AC429 /* [CP] Embed Pods Frameworks */,
+				277E8431ABFC26B95429EBD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC9844411EDEAA8200065B8C /* Build configuration list for PBXNativeTarget "TuneMinderTests" */;
 			buildPhases = (
+				3EA03491A5D17D35CA2D7752 /* [CP] Check Pods Manifest.lock */,
 				DC9844261EDEAA8200065B8C /* Sources */,
 				DC9844271EDEAA8200065B8C /* Frameworks */,
 				DC9844281EDEAA8200065B8C /* Resources */,
+				0A29E3B9B548976CE0135816 /* [CP] Embed Pods Frameworks */,
+				D93C373EDCC8D0F2A4CFC385 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC9844441EDEAA8200065B8C /* Build configuration list for PBXNativeTarget "TuneMinderUITests" */;
 			buildPhases = (
+				4274569A7B2821114491C6E3 /* [CP] Check Pods Manifest.lock */,
 				DC9844311EDEAA8200065B8C /* Sources */,
 				DC9844321EDEAA8200065B8C /* Frameworks */,
 				DC9844331EDEAA8200065B8C /* Resources */,
+				8B4C5B7BE916C6620252F068 /* [CP] Embed Pods Frameworks */,
+				A4A322D787BBBB2F2C90CDC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9844241EDEAA8200065B8C /* LaunchScreen.storyboard in Resources */,
+				DC9844481EDFE97E00065B8C /* GoogleService-Info.plist in Resources */,
 				DC9844211EDEAA8200065B8C /* Assets.xcassets in Resources */,
 				DC98441F1EDEAA8200065B8C /* Main.storyboard in Resources */,
 			);
@@ -259,6 +312,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		098095BA1375AEADA71AC429 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinder/Pods-TuneMinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A29E3B9B548976CE0135816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinderTests/Pods-TuneMinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		277E8431ABFC26B95429EBD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinder/Pods-TuneMinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EA03491A5D17D35CA2D7752 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4274569A7B2821114491C6E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B4C5B7BE916C6620252F068 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97289332842DEB24151233BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A322D787BBBB2F2C90CDC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D93C373EDCC8D0F2A4CFC385 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneMinderTests/Pods-TuneMinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC9844101EDEAA8200065B8C /* Sources */ = {
@@ -417,6 +608,7 @@
 		};
 		DC98443F1EDEAA8200065B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DE2C25F9B8F43EB2CE2B82 /* Pods-TuneMinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z8TX832C98;
@@ -430,6 +622,7 @@
 		};
 		DC9844401EDEAA8200065B8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA0D5D5D94B4C82C97D41DF /* Pods-TuneMinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z8TX832C98;
@@ -443,6 +636,7 @@
 		};
 		DC9844421EDEAA8200065B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26601CE0C425254F16898A4C /* Pods-TuneMinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +652,7 @@
 		};
 		DC9844431EDEAA8200065B8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A9F5B1316F701F213BCAD1 /* Pods-TuneMinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +668,7 @@
 		};
 		DC9844451EDEAA8200065B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA85466EAE44C88836BC832 /* Pods-TuneMinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Z8TX832C98;
@@ -487,6 +683,7 @@
 		};
 		DC9844461EDEAA8200065B8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F065218C6A13CDF2134CE852 /* Pods-TuneMinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Z8TX832C98;

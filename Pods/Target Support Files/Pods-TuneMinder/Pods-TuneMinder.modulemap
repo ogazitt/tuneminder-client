@@ -1,0 +1,6 @@
+framework module Pods_TuneMinder {
+  umbrella header "Pods-TuneMinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
