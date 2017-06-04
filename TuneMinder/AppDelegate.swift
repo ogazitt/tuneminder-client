@@ -18,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        // [START storageauth]
+        // Using Cloud Storage for Firebase requires the user be authenticated. Here we are using
+        // anonymous authentication.
+        if Auth.auth().currentUser == nil {
+            Auth.auth().signInAnonymously(completion: { (user: User?, error: Error?) in
+                if let error = error {
+                    //self.urlTextView.text = error.localizedDescription
+                    //self.takePicButton.isEnabled = false
+                } else {
+                    //self.urlTextView.text = ""
+                    //self.takePicButton.isEnabled = true
+                }
+            })
+        }
+        // [END storageauth]
+
         return true
     }
 

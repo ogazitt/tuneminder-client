@@ -10,9 +10,11 @@
 		19D4CFF83089228A3DE627EB /* Pods_TuneMinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5A6EE888F0468C7B2CF587 /* Pods_TuneMinderTests.framework */; };
 		BD539CF760A804EDF3DEBE5E /* Pods_TuneMinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */; };
 		C2BA37AA693625C236FD2652 /* Pods_TuneMinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */; };
+		DC58C0E31EE4BB0800CB57B1 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C0E21EE4BB0800CB57B1 /* TagsViewController.swift */; };
+		DC58C0E51EE4BC9400CB57B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */; };
 		DC9844181EDEAA8200065B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844171EDEAA8200065B8C /* AppDelegate.swift */; };
 		DC98441A1EDEAA8200065B8C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844191EDEAA8200065B8C /* FirstViewController.swift */; };
-		DC98441C1EDEAA8200065B8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98441B1EDEAA8200065B8C /* SecondViewController.swift */; };
+		DC98441C1EDEAA8200065B8C /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */; };
 		DC98441F1EDEAA8200065B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98441D1EDEAA8200065B8C /* Main.storyboard */; };
 		DC9844211EDEAA8200065B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9844201EDEAA8200065B8C /* Assets.xcassets */; };
 		DC9844241EDEAA8200065B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9844221EDEAA8200065B8C /* LaunchScreen.storyboard */; };
@@ -45,10 +47,12 @@
 		8BA0D5D5D94B4C82C97D41DF /* Pods-TuneMinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinder/Pods-TuneMinder.release.xcconfig"; sourceTree = "<group>"; };
 		A7A9F5B1316F701F213BCAD1 /* Pods-TuneMinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderTests/Pods-TuneMinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		CAA85466EAE44C88836BC832 /* Pods-TuneMinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC58C0E21EE4BB0800CB57B1 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DC9844141EDEAA8200065B8C /* TuneMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuneMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9844171EDEAA8200065B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9844191EDEAA8200065B8C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DC98441B1EDEAA8200065B8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		DC98441E1EDEAA8200065B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC9844201EDEAA8200065B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC9844231EDEAA8200065B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,7 +147,9 @@
 			children = (
 				DC9844171EDEAA8200065B8C /* AppDelegate.swift */,
 				DC9844191EDEAA8200065B8C /* FirstViewController.swift */,
-				DC98441B1EDEAA8200065B8C /* SecondViewController.swift */,
+				DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */,
+				DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */,
+				DC58C0E21EE4BB0800CB57B1 /* TagsViewController.swift */,
 				DC98441D1EDEAA8200065B8C /* Main.storyboard */,
 				DC9844201EDEAA8200065B8C /* Assets.xcassets */,
 				DC9844221EDEAA8200065B8C /* LaunchScreen.storyboard */,
@@ -456,8 +462,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC98441C1EDEAA8200065B8C /* SecondViewController.swift in Sources */,
+				DC98441C1EDEAA8200065B8C /* PhotosViewController.swift in Sources */,
+				DC58C0E31EE4BB0800CB57B1 /* TagsViewController.swift in Sources */,
 				DC9844181EDEAA8200065B8C /* AppDelegate.swift in Sources */,
+				DC58C0E51EE4BC9400CB57B1 /* SettingsViewController.swift in Sources */,
 				DC98441A1EDEAA8200065B8C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +723,7 @@
 				DC9844401EDEAA8200065B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC9844411EDEAA8200065B8C /* Build configuration list for PBXNativeTarget "TuneMinderTests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +732,7 @@
 				DC9844431EDEAA8200065B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC9844441EDEAA8200065B8C /* Build configuration list for PBXNativeTarget "TuneMinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +741,7 @@
 				DC9844461EDEAA8200065B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

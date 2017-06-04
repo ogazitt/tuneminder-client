@@ -75,10 +75,13 @@ class FirstViewController: UIViewController,
                 //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(imageFile!.lastPathComponent)"
                 
                 let filePath = "14257650079." + imageFile!.lastPathComponent
-                
+
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpeg"
+
                 // [START uploadimage]
                 self.storageRef.child(filePath)
-                    .putFile(from: imageFile!, metadata: nil) { (metadata, error) in
+                    .putFile(from: imageFile!, metadata: metadata) { (metadata, error) in
                         if let error = error {
                             print("Error uploading: \(error)")
                             //self.urlTextView.text = "Upload Failed"
@@ -115,10 +118,16 @@ class FirstViewController: UIViewController,
         UserDefaults.standard.set(storagePath, forKey: "storagePath")
         UserDefaults.standard.synchronize()
         //self.downloadPicButton.isEnabled = true
+
+        // switch to the tags tab bar item
+        self.tabBarController?.selectedIndex = 2;
+
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion:nil)
+        // switch to the tags tab bar item
+        self.tabBarController?.selectedIndex = 2;
     }
 }
 
