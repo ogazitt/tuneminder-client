@@ -21,6 +21,7 @@ class FirstViewController: UIViewController,
         
         // [START configurestorage]
         storageRef = Storage.storage().reference()
+        //storageRef = Storage.storage().reference(forURL: "gs://tuneminder-images")
         // [END configurestorage]
     }
     
@@ -70,10 +71,10 @@ class FirstViewController: UIViewController,
             let asset = assets.firstObject
             asset?.requestContentEditingInput(with: nil, completionHandler: { (contentEditingInput, info) in
                 let imageFile = contentEditingInput?.fullSizeImageURL
-                //var filePath = Auth.auth().currentUser!.uid +
+                //let filePath = Auth.auth().currentUser!.uid +
                 //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(imageFile!.lastPathComponent)"
                 
-                var filePath = "14257650079." + imageFile!.lastPathComponent
+                let filePath = "14257650079." + imageFile!.lastPathComponent
                 
                 // [START uploadimage]
                 self.storageRef.child(filePath)
@@ -90,10 +91,10 @@ class FirstViewController: UIViewController,
         } else {
             guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
             guard let imageData = UIImageJPEGRepresentation(image, 0.8) else { return }
-            //var imagePath = Auth.auth().currentUser!.uid +
+            //let imagePath = Auth.auth().currentUser!.uid +
             //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
             
-            var imagePath = "14257650079." + "\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+            let imagePath = "14257650079." + "\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
             
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
