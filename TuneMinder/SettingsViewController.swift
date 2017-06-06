@@ -8,19 +8,36 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+struct settingsKeys {
+    static let phoneNumber = "phoneNumber"
+    static let email = "email"
+}
 
+class SettingsViewController: UIViewController {
+    let settings = UserDefaults.standard
+
+    @IBOutlet weak var phoneTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber) {
+            print(phoneNumber) // Some String Value
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    @IBAction func saveButton(_ sender: UIButton) {
+        self.view.endEditing(true)
+        settings.set(phoneTextField.text, forKey: settingsKeys.phoneNumber)
+    }
+
 
     /*
     // MARK: - Navigation
