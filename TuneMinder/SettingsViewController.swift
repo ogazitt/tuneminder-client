@@ -13,7 +13,7 @@ struct settingsKeys {
     static let email = "email"
 }
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     let settings = UserDefaults.standard
 
     @IBOutlet weak var phoneTextField: UITextField!
@@ -22,9 +22,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        phoneTextField.delegate = self;
+
         if let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber) {
-            print(phoneNumber) // Some String Value
+            phoneTextField.text = phoneNumber
         }
     }
 
@@ -38,7 +39,11 @@ class SettingsViewController: UIViewController {
         settings.set(phoneTextField.text, forKey: settingsKeys.phoneNumber)
     }
 
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //self.view.endEditing(true)
+        phoneTextField.resignFirstResponder()
+        return true
+    }
     /*
     // MARK: - Navigation
 
