@@ -27,6 +27,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         if let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber) {
             phoneTextField.text = phoneNumber
         }
+        
+        phoneTextField.addTarget(nil, action:Selector(("firstResponderAction:")), for:.editingDidEndOnExit)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +46,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         phoneTextField.resignFirstResponder()
         return true
     }
+    
+    /*
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
+     */
+    
     /*
     // MARK: - Navigation
 
