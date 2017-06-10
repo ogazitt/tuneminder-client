@@ -17,18 +17,25 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     let settings = UserDefaults.standard
 
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         phoneTextField.delegate = self;
-
+        emailTextField.delegate = self;
+        
         if let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber) {
             phoneTextField.text = phoneNumber
         }
         
+        if let email = settings.string(forKey: settingsKeys.email) {
+            emailTextField.text = email
+        }
+        
         phoneTextField.addTarget(nil, action:Selector(("firstResponderAction:")), for:.editingDidEndOnExit)
+        emailTextField.addTarget(nil, action:Selector(("firstResponderAction:")), for:.editingDidEndOnExit)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,11 +46,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButton(_ sender: UIButton) {
         self.view.endEditing(true)
         settings.set(phoneTextField.text, forKey: settingsKeys.phoneNumber)
+        settings.set(emailTextField.text, forKey: settingsKeys.email)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //self.view.endEditing(true)
         phoneTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
         return true
     }
     
