@@ -23,9 +23,8 @@ class PhotosViewController: UIViewController,
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // [START configurestorage]
         storageRef = Storage.storage().reference()
-        // [END configurestorage]
+        saving = false
     }
     
     override func viewDidAppear(_ animated: Bool) {

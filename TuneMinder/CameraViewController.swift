@@ -16,12 +16,14 @@ class CameraViewController: UIViewController,
     var storageRef: StorageReference!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let settings = UserDefaults.standard
+    var saving = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         storageRef = Storage.storage().reference()
+        saving = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +44,10 @@ class CameraViewController: UIViewController,
         }
         // [END storageauth]
     
+        if self.saving {
+            return
+        }
+
         // MARK: - Image Picker
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -50,7 +56,7 @@ class CameraViewController: UIViewController,
         } else {
             picker.sourceType = .photoLibrary
         }
-        
+
         present(picker, animated: true, completion:nil)
     }
 
@@ -110,12 +116,15 @@ class CameraViewController: UIViewController,
                 self.uploadSuccess(metadata!, storagePath: imagePath)
             }
         }
+        
+        self.saving = true
     }
     
     func uploadSuccess(_ metadata: StorageMetadata, storagePath: String) {
         print("Upload Succeeded!")
 
         save(url: storagePath)
+        saving = false
 
         // switch to the tags tab bar item
         self.tabBarController?.selectedIndex = 2;
