@@ -14,6 +14,8 @@ class CameraViewController: UIViewController,
                             UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var storageRef: StorageReference!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let settings = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +72,8 @@ class CameraViewController: UIViewController,
                 //let filePath = Auth.auth().currentUser!.uid +
                 //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(imageFile!.lastPathComponent)"
                 
-                let filePath = "14257650079." + imageFile!.lastPathComponent
+                let phoneNumber = self.settings.string(forKey: settingsKeys.phoneNumber)
+                let filePath = "\(phoneNumber ?? "14257650079").\(imageFile!.lastPathComponent).jpg"
 
                 let metadata = StorageMetadata()
                 metadata.contentType = "image/jpeg"
@@ -93,7 +96,8 @@ class CameraViewController: UIViewController,
             //let imagePath = Auth.auth().currentUser!.uid +
             //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
             
-            let imagePath = "14257650079." + "\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+            let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber)
+            let imagePath = "\(phoneNumber ?? "14257650079").\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
             
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
@@ -124,12 +128,7 @@ class CameraViewController: UIViewController,
         self.tabBarController?.selectedIndex = 2;
     }
 
-    func save(url: String) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
+    func save(url: String) {        
         let context = appDelegate.persistentContainer.viewContext
         let tag = Tag(context: context)
         tag.url = url

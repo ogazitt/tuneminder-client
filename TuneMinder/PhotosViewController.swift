@@ -14,7 +14,10 @@ import CoreData
 class PhotosViewController: UIViewController,
                             UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var storageRef: StorageReference!
+    var storageRef: StorageReference!    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let settings = UserDefaults.standard
+    var saving = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +47,11 @@ class PhotosViewController: UIViewController,
         }
         // [END storageauth]
   */
+        
+        if self.saving {
+            return
+        }
+        
         // MARK: - Image Picker
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -65,7 +73,8 @@ class PhotosViewController: UIViewController,
         //let imagePath = Auth.auth().currentUser!.uid +
         //"/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
         
-        let imagePath = "14257650079." + "\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+        let phoneNumber = settings.string(forKey: settingsKeys.phoneNumber)
+        let imagePath = "\(phoneNumber ?? "14257650079").\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
         
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
@@ -77,8 +86,8 @@ class PhotosViewController: UIViewController,
             }
             self.uploadSuccess(metadata!, storagePath: imagePath)
         }
-        // switch to the tags tab bar item
-        self.tabBarController?.selectedIndex = 2;
+
+        self.saving = true
 
         /*
         //urlTextView.text = "Beginning Upload"
@@ -144,10 +153,11 @@ class PhotosViewController: UIViewController,
         print("Upload Succeeded!")
         
         save(url: storagePath)
+        saving = false
 
         // switch to the tags tab bar item
         self.tabBarController?.selectedIndex = 2;
-}
+    }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion:nil)
@@ -156,12 +166,7 @@ class PhotosViewController: UIViewController,
     }
     
     func save(url: String) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext        
+        let context = appDelegate.persistentContainer.viewContext
         let tag = Tag(context: context)
         tag.url = url
         appDelegate.saveContext()
