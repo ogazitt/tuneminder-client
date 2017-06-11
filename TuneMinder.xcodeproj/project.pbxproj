@@ -13,7 +13,7 @@
 		DC58C0E31EE4BB0800CB57B1 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C0E21EE4BB0800CB57B1 /* TagsViewController.swift */; };
 		DC58C0E51EE4BC9400CB57B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */; };
 		DC9844181EDEAA8200065B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844171EDEAA8200065B8C /* AppDelegate.swift */; };
-		DC98441A1EDEAA8200065B8C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844191EDEAA8200065B8C /* FirstViewController.swift */; };
+		DC98441A1EDEAA8200065B8C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844191EDEAA8200065B8C /* CameraViewController.swift */; };
 		DC98441C1EDEAA8200065B8C /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */; };
 		DC98441F1EDEAA8200065B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC98441D1EDEAA8200065B8C /* Main.storyboard */; };
 		DC9844211EDEAA8200065B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9844201EDEAA8200065B8C /* Assets.xcassets */; };
@@ -21,6 +21,7 @@
 		DC98442F1EDEAA8200065B8C /* TuneMinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98442E1EDEAA8200065B8C /* TuneMinderTests.swift */; };
 		DC98443A1EDEAA8200065B8C /* TuneMinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844391EDEAA8200065B8C /* TuneMinderUITests.swift */; };
 		DC9844481EDFE97E00065B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */; };
+		DCAA94AF1EECBF7300E93339 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCAA94AD1EECBF7300E93339 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 		DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DC9844141EDEAA8200065B8C /* TuneMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuneMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9844171EDEAA8200065B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC9844191EDEAA8200065B8C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		DC9844191EDEAA8200065B8C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		DC98441E1EDEAA8200065B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC9844201EDEAA8200065B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		DC9844391EDEAA8200065B8C /* TuneMinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneMinderUITests.swift; sourceTree = "<group>"; };
 		DC98443B1EDEAA8200065B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCAA94AE1EECBF7300E93339 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F065218C6A13CDF2134CE852 /* Pods-TuneMinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				DC9844171EDEAA8200065B8C /* AppDelegate.swift */,
-				DC9844191EDEAA8200065B8C /* FirstViewController.swift */,
+				DCAA94AD1EECBF7300E93339 /* Model.xcdatamodeld */,
+				DC9844191EDEAA8200065B8C /* CameraViewController.swift */,
 				DC98441B1EDEAA8200065B8C /* PhotosViewController.swift */,
 				DC58C0E41EE4BC9400CB57B1 /* SettingsViewController.swift */,
 				DC58C0E21EE4BB0800CB57B1 /* TagsViewController.swift */,
@@ -466,7 +469,8 @@
 				DC58C0E31EE4BB0800CB57B1 /* TagsViewController.swift in Sources */,
 				DC9844181EDEAA8200065B8C /* AppDelegate.swift in Sources */,
 				DC58C0E51EE4BC9400CB57B1 /* SettingsViewController.swift in Sources */,
-				DC98441A1EDEAA8200065B8C /* FirstViewController.swift in Sources */,
+				DC98441A1EDEAA8200065B8C /* CameraViewController.swift in Sources */,
+				DCAA94AF1EECBF7300E93339 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +748,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCAA94AD1EECBF7300E93339 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCAA94AE1EECBF7300E93339 /* Model.xcdatamodel */,
+			);
+			currentVersion = DCAA94AE1EECBF7300E93339 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC98440C1EDEAA8200065B8C /* Project object */;
 }

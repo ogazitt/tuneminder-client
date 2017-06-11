@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Picture-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="TuneMinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="CameraViewController" customModule="TuneMinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -108,14 +109,32 @@
                     <view key="view" contentMode="scaleToFill" id="5cG-Cd-BdA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-gY-9AD">
+                                <rect key="frame" x="0.0" y="1" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uTY-Tk-b31" id="8CD-0B-99I"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X2k-gY-9AD" firstAttribute="leading" secondItem="5cG-Cd-BdA" secondAttribute="leadingMargin" constant="-16" id="3R2-xf-Pm9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X2k-gY-9AD" secondAttribute="trailing" constant="-16" id="6VR-yy-TMG"/>
+                            <constraint firstItem="X2k-gY-9AD" firstAttribute="top" secondItem="gAK-6r-9Ho" secondAttribute="bottom" constant="-19" id="BHS-1M-b54"/>
+                            <constraint firstItem="Pyd-42-TaT" firstAttribute="top" secondItem="X2k-gY-9AD" secondAttribute="bottom" id="jbT-Sd-lS2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tags" image="notes" selectedImage="notes" id="BdV-Ck-Tpn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="X2k-gY-9AD" id="Pda-14-XX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkA-h3-Ulu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535" y="457"/>
+            <point key="canvasLocation" x="-535.20000000000005" y="456.52173913043481"/>
         </scene>
         <!--Photos-->
         <scene sceneID="wg7-f3-ORb">

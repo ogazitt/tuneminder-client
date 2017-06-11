@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
-class TagsViewController: UIViewController {
+class TagsViewController: UIViewController, UITableViewDelegate {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tags: [Tag] = []
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self,
+                           forCellReuseIdentifier: "Cell")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getData()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +38,15 @@ class TagsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func getData() {
+        do {
+            tags = try context.fetch(Tag.fetchRequest())
+        }
+        catch {
+            print("Fetching Failed")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -32,4 +57,24 @@ class TagsViewController: UIViewController {
     }
     */
 
+}
+
+// MARK: - UITableViewDataSource
+extension TagsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return tags.count
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell {
+            
+            let cell =
+                tableView.dequeueReusableCell(withIdentifier: "Cell",
+                                              for: indexPath)
+            cell.textLabel?.text = tags[indexPath.row].url
+            return cell
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  CameraViewController.swift
 //  TuneMinder
 //
 //  Created by Omri Gazitt on 5/31/17.
@@ -10,8 +10,8 @@ import UIKit
 import Photos
 import Firebase
 
-class FirstViewController: UIViewController,
-                        UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController,
+                            UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var storageRef: StorageReference!
 
@@ -19,10 +19,7 @@ class FirstViewController: UIViewController,
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // [START configurestorage]
         storageRef = Storage.storage().reference()
-        //storageRef = Storage.storage().reference(forURL: "gs://tuneminder-images")
-        // [END configurestorage]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +61,6 @@ class FirstViewController: UIViewController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion:nil)
         
-        //urlTextView.text = "Beginning Upload"
         // if it's a photo from the library, not an image from the camera
         if #available(iOS 8.0, *), let referenceUrl = info[UIImagePickerControllerReferenceURL] as? URL {
             let assets = PHAsset.fetchAssets(withALAssetURLs: [referenceUrl], options: nil)
@@ -114,10 +110,8 @@ class FirstViewController: UIViewController,
     
     func uploadSuccess(_ metadata: StorageMetadata, storagePath: String) {
         print("Upload Succeeded!")
-        //self.urlTextView.text = metadata.downloadURL()?.absoluteString
-        UserDefaults.standard.set(storagePath, forKey: "storagePath")
-        UserDefaults.standard.synchronize()
-        //self.downloadPicButton.isEnabled = true
+
+        save(url: storagePath)
 
         // switch to the tags tab bar item
         self.tabBarController?.selectedIndex = 2;
@@ -128,6 +122,18 @@ class FirstViewController: UIViewController,
         picker.dismiss(animated: true, completion:nil)
         // switch to the tags tab bar item
         self.tabBarController?.selectedIndex = 2;
+    }
+
+    func save(url: String) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        let tag = Tag(context: context)
+        tag.url = url
+        appDelegate.saveContext()
     }
 }
 

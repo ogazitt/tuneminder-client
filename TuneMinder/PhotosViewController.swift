@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  PhotosViewController.swift
 //  TuneMinder
 //
 //  Created by Omri Gazitt on 5/31/17.
@@ -9,6 +9,7 @@
 import UIKit
 import Photos
 import Firebase
+import CoreData
 
 class PhotosViewController: UIViewController,
                             UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -141,15 +142,12 @@ class PhotosViewController: UIViewController,
     
     func uploadSuccess(_ metadata: StorageMetadata, storagePath: String) {
         print("Upload Succeeded!")
-        //self.urlTextView.text = metadata.downloadURL()?.absoluteString
-        UserDefaults.standard.set(storagePath, forKey: "storagePath")
-        UserDefaults.standard.synchronize()
-        //self.downloadPicButton.isEnabled = true
         
+        save(url: storagePath)
+
         // switch to the tags tab bar item
         self.tabBarController?.selectedIndex = 2;
-        
-    }
+}
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion:nil)
@@ -157,42 +155,16 @@ class PhotosViewController: UIViewController,
         self.tabBarController?.selectedIndex = 2;
     }
     
-    /*
-import UIKit
-import FirebaseStorage
-
-class PhotosViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let storage = Storage.storage()
-
-        // Create a root reference
-        let storageRef = storage.reference()
-
-        // File located on disk
-        let localFile = URL(string: "path/to/image")!
+    func save(url: String) {
         
-        // Create a reference to the file you want to upload
-        let riversRef = storageRef.child("images/rivers.jpg")
-        
-        // Upload the file to the path "images/rivers.jpg"
-        let uploadTask = riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-            } else {
-                // Metadata contains file metadata such as size, content-type, and download URL.
-                let downloadURL = metadata!.downloadURL()
-            }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
         }
+        
+        let context = appDelegate.persistentContainer.viewContext        
+        let tag = Tag(context: context)
+        tag.url = url
+        appDelegate.saveContext()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-*/
-
 }
 
