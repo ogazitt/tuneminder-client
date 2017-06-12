@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TagsViewController: UIViewController, UITableViewDelegate {
+class TagsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -60,7 +60,7 @@ class TagsViewController: UIViewController, UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension TagsViewController: UITableViewDataSource {
+extension TagsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -76,5 +76,26 @@ extension TagsViewController: UITableViewDataSource {
                                               for: indexPath)
             cell.textLabel?.text = tags[indexPath.row].url
             return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("User tapped " + String(indexPath.row))
+        
+        let imagePath = tags[indexPath.row].url
+        
+        self.performSegue(withIdentifier: "detailSegue", sender:self)
+
+        //let detail = DetailViewController()
+        //detail.imagePath = imagePath!
+        //present(detail, animated: true, completion:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" ,
+            let nextScene = segue.destination as? DetailViewController ,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let imagePath = tags[indexPath.row].url
+            nextScene.imagePath = imagePath!
+        }
     }
 }

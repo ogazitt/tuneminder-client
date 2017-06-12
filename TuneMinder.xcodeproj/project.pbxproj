@@ -22,6 +22,7 @@
 		DC98443A1EDEAA8200065B8C /* TuneMinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9844391EDEAA8200065B8C /* TuneMinderUITests.swift */; };
 		DC9844481EDFE97E00065B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */; };
 		DCAA94AF1EECBF7300E93339 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCAA94AD1EECBF7300E93339 /* Model.xcdatamodeld */; };
+		DCAA94B11EEE0E4700E93339 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA94B01EEE0E4700E93339 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		DC98443B1EDEAA8200065B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCAA94AE1EECBF7300E93339 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DCAA94B01EEE0E4700E93339 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E1F320874431333AC89D08E3 /* Pods_TuneMinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F065218C6A13CDF2134CE852 /* Pods-TuneMinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneMinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneMinderUITests/Pods-TuneMinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F74FEF25133F561925F88D10 /* Pods_TuneMinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneMinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				DC9844221EDEAA8200065B8C /* LaunchScreen.storyboard */,
 				DC9844251EDEAA8200065B8C /* Info.plist */,
 				DC9844471EDFE97E00065B8C /* GoogleService-Info.plist */,
+				DCAA94B01EEE0E4700E93339 /* DetailViewController.swift */,
 			);
 			path = TuneMinder;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				DC58C0E51EE4BC9400CB57B1 /* SettingsViewController.swift in Sources */,
 				DC98441A1EDEAA8200065B8C /* CameraViewController.swift in Sources */,
 				DCAA94AF1EECBF7300E93339 /* Model.xcdatamodeld in Sources */,
+				DCAA94B11EEE0E4700E93339 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

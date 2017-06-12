@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16c-hO-pde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1618.4000000000001" y="453.82308845577217"/>
+            <point key="canvasLocation" x="-1580" y="440"/>
         </scene>
         <!--Tags-->
         <scene sceneID="MSG-G5-4Jh">
@@ -130,11 +130,48 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="X2k-gY-9AD" id="Pda-14-XX0"/>
+                        <segue destination="B3s-Fj-wQv" kind="show" identifier="detailSegue" id="bwb-R9-3vW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkA-h3-Ulu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535.20000000000005" y="456.52173913043481"/>
+            <point key="canvasLocation" x="-551" y="454"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="wGm-SL-R06">
+            <objects>
+                <viewController id="B3s-Fj-wQv" customClass="DetailViewController" customModule="TuneMinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Igl-T0-zV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="qoU-zZ-FBA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xHh-5g-JiY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-ue-V80">
+                                <rect key="frame" x="0.0" y="557" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="B3s-Fj-wQv" eventType="touchUpInside" id="8NR-07-41n"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYu-qy-ctd">
+                                <rect key="frame" x="0.0" y="41" width="375" height="458"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CYu-qy-ctd" id="6ym-QA-dL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2S1-n2-aCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183.19999999999999" y="452.92353823088462"/>
         </scene>
         <!--Photos-->
         <scene sceneID="wg7-f3-ORb">
@@ -153,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="415"/>
+            <point key="canvasLocation" x="961" y="441"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
