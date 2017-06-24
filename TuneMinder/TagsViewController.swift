@@ -74,14 +74,18 @@ extension TagsViewController: UITableViewDataSource, UITableViewDelegate {
             let cell =
                 tableView.dequeueReusableCell(withIdentifier: "Cell",
                                               for: indexPath)
-            cell.textLabel?.text = tags[indexPath.row].url
+            //cell.textLabel?.text = tags[indexPath.row].url
+            let artist = tags[indexPath.row].artist ?? ""
+            let track = tags[indexPath.row].track ?? ""
+            let cellTitle = artist == "" ? tags[indexPath.row].url : "\(artist):\(track)"
+            cell.textLabel?.text = cellTitle
             return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("User tapped " + String(indexPath.row))
         
-        let imagePath = tags[indexPath.row].url
+        //let imagePath = tags[indexPath.row].url
         
         self.performSegue(withIdentifier: "detailSegue", sender:self)
 
