@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Firebase
+
 
 class TagsViewController: UIViewController {
 
@@ -16,11 +18,15 @@ class TagsViewController: UIViewController {
     var tags: [Tag] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var storageRef: StorageReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        storageRef = Storage.storage().reference()
+        
         tableView.delegate = self
         tableView.register(UITableViewCell.self,
                            forCellReuseIdentifier: "Cell")
@@ -45,6 +51,12 @@ class TagsViewController: UIViewController {
         catch {
             print("Fetching Failed")
         }
+        
+        for tag in tags {
+            if tag.artist == "" {
+                downloadSongInfo(tag: tag)
+            }
+        }
     }
     
     /*
@@ -56,6 +68,29 @@ class TagsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func downloadSongInfo(tag: Tag) {
+        let imagePath = tag.url!
+
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let filePath = "file:\(documentsDirectory)/\(imagePath).songInfo"
+        
+        guard let fileURL = URL.init(string: imagePath) else { return }
+        
+        // [START downloadimage]
+        storageRef.child(imagePath).write(toFile: fileURL, completion: { (url, error) in
+            if let error = error {
+                print("Error downloading:\(error)")
+                //self.statusTextView.text = "Download Failed"
+                return
+            } else if let localPath = url?.path {
+                //self.statusTextView.text = "Download Succeeded!"
+                //self.imageView.image = UIImage.init(contentsOfFile: localPath)
+                print("got a URL: \(localPath)")
+            }
+        })
+    }
 
 }
 
